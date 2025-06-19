@@ -1,0 +1,51 @@
+<!-- home.html (Final + Hover Sound on Buttons) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapan Interior - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="text-center">
+<header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+  <div class="container mx-auto px-6 py-3 flex justify-center items-center">
+    <a href="home.html"><img src="https://i.imghippo.com/files/jeLf8293ko.png" alt="Logo Mapan" class="h-12 w-auto max-w-xs"></a>
+  </div>
+</header>
+<main>
+  <section class="hero-section text-white bg-cover bg-center py-20 px-4" style="background-image: url('https://i.imghippo.com/files/L4862IxY.jpg');">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">Wujudkan Ruang Impian Anda</h1>
+      <div class="flex flex-col items-center space-y-4 mt-8 w-full max-w-xs mx-auto">
+        <a href="index.html" class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl w-full">Introducing</a>
+        <a href="tentang.html" class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl w-full">Tentang Kami</a>
+        <a href="layanan.html" class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl w-full">Layanan</a>
+        <a href="portfolio.html" class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl w-full">Portofolio</a>
+        <a href="kontak.html" class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl w-full">Kontak Kami</a>
+        <a href="estimator.html" class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl w-full">Estimator Price</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="text-gray-600 text-center py-6">
+  <p>&copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN</p>
+</footer>
+
+<!-- Audio Hover Sound -->
+<audio id="hover-audio-home" src="https://media.vocaroo.com/mp3/1gxAEKzVmrEw"></audio>
+<script>
+  lucide.createIcons();
+  const buttonsHome = document.querySelectorAll('a');
+  const audioHome = document.getElementById('hover-audio-home');
+
+  buttonsHome.forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      audioHome.currentTime = 0;
+      audioHome.play();
+    });
+  });
+</script>
+</body>
+</html>
