@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimator Price - Mapan Interior</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center bg-cover bg-center" style="background-image: url('https://i.imghippo.com/files/L4862IxY.jpg');">
+<header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+  <div class="container mx-auto px-4 py-3 flex justify-center items-center">
+    <a href="home.html"><img src="https://i.imghippo.com/files/jeLf8293ko.png" alt="Logo Mapan" class="h-12 w-auto"></a>
+  </div>
+  <nav class="flex flex-wrap justify-center space-x-4 md:space-x-8 py-4 text-sm md:text-base">
+    <a href="index.html">Introducing</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="layanan.html">Layanan</a>
+    <a href="portfolio.html">Portofolio</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="estimator.html">Estimator Price</a>
+  </nav>
+</header>
+
+<main class="py-10 px-4">
+  <h1 class="text-2xl md:text-3xl font-bold my-6 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">Estimator Price</h1>
+  <p class="text-red-600 max-w-xl mx-auto mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">
+    Ini adalah fitur kami, masih dalam tahap percobaan, dan mari kita hitung estimasi biayanya. Biaya yang muncul hanya estimasi termahalnya, untuk harga final, diskon, dan harga yang lebih murah bisa langsung hubungi kami. Terima kasih.
+  </p>
+  <a href="https://furniture-price-web-lqdl.vercel.app/" target="_blank" 
+     class="bg-red-600 text-white py-4 px-8 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 text-base md:text-xl">
+    Buka Estimator
+  </a>
+</main>
+
+<footer class="text-gray-200 text-center py-6">
+  <p>&copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN</p>
+</footer>
+
+<audio id="hover-audio-estimator" src="https://media.vocaroo.com/mp3/1gxAEKzVmrEw"></audio>
+<script>
+  const navLinksEstimator = document.querySelectorAll('nav a');
+  const audioEstimator = document.getElementById('hover-audio-estimator');
+  
+  navLinksEstimator.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      audioEstimator.currentTime = 0;
+      audioEstimator.play();
+    });
+  });
+
+  const estimatorButton = document.querySelector('a[href^="https://furniture-price-web-lqdl.vercel.app"]');
+  estimatorButton.addEventListener('mouseenter', () => {
+    audioEstimator.currentTime = 0;
+    audioEstimator.play();
+  });
+</script>
+</body>
+</html>

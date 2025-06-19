@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak Kami - Mapan Interior</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-center bg-cover bg-center" style="background-image: url('https://i.imghippo.com/files/L4862IxY.jpg');">
+<header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+  <div class="container mx-auto px-4 py-3 flex justify-center items-center">
+    <a href="home.html"><img src="https://i.imghippo.com/files/jeLf8293ko.png" alt="Logo Mapan" class="h-12 w-auto"></a>
+  </div>
+  <nav class="flex flex-wrap justify-center space-x-4 md:space-x-8 py-4 text-sm md:text-base">
+    <a href="index.html">Introducing</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="layanan.html">Layanan</a>
+    <a href="portfolio.html">Portofolio</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="estimator.html">Estimator Price</a>
+  </nav>
+</header>
+
+<main class="py-10 px-4">
+  <h1 class="text-2xl md:text-3xl font-bold my-6 text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">Kontak Kami</h1>
+  <form id="contact-form" class="bg-white/90 p-6 rounded-xl drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] max-w-md mx-auto space-y-4">
+    <input type="text" name="nama" placeholder="Nama" required class="w-full p-3 rounded" />
+    <input type="text" name="kota" placeholder="Kota" required class="w-full p-3 rounded" />
+    <input type="tel" name="telepon" placeholder="Nomor Telepon" required class="w-full p-3 rounded" />
+    <input type="text" name="referensi" placeholder="Referensi (misal: Instagram, Google, Teman)" class="w-full p-3 rounded" />
+    <button id="submit-button" type="submit" class="bg-red-600 text-white py-3 px-6 rounded hover:bg-red-700 w-full">Kirim</button>
+  </form>
+
+  <!-- Pesan Sukses -->
+  <p id="success-message" class="text-red-600 font-semibold mt-4 hidden">
+    Data Anda sudah kami terima, silahkan tunggu tim kami akan menghubungi Anda. Terima kasih.
+  </p>
+
+  <!-- Detail Kontak -->
+  <div class="bg-white/80 p-4 mt-6 rounded-xl max-w-md mx-auto text-left text-gray-800 shadow-md">
+    <h2 class="font-semibold mb-2 text-center">Pusat Informasi Pelanggan:</h2>
+    <p>📍 <strong>Alamat:</strong> Tangerang</p>
+    <p>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/6282112134258" target="_blank" class="text-blue-600 underline">082112134258</a></p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:enigmapan8@gmail.com" class="text-blue-600 underline">enigmapan8@gmail.com</a></p>
+    <p>📸 <strong>Instagram:</strong> <a href="https://instagram.com/mapan.interiorr" target="_blank" class="text-blue-600 underline">@mapan.interiorr</a></p>
+  </div>
+</main>
+
+<footer class="text-gray-200 text-center py-6">
+  <p>&copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN</p>
+</footer>
+
+<audio id="hover-audio-kontak" src="https://media.vocaroo.com/mp3/1gxAEKzVmrEw"></audio>
+<script>
+  const navLinksKontak = document.querySelectorAll('nav a');
+  const audioKontak = document.getElementById('hover-audio-kontak');
+  const submitButton = document.getElementById('submit-button');
+
+  navLinksKontak.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      audioKontak.currentTime = 0;
+      audioKontak.play();
+    });
+  });
+
+  submitButton.addEventListener('mouseenter', () => {
+    audioKontak.currentTime = 0;
+    audioKontak.play();
+  });
+
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch('https://script.google.com/macros/s/AKfycbzK8w4CQGdqKaaeOI6K2-WdAFm_LtJDAivTZC-VzPd1tTSX2mXYticKmJCu41Ym4ANc5w/exec', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        successMessage.classList.remove('hidden');
+        form.reset();
+      } else {
+        alert('Gagal mengirim data.');
+      }
+    })
+    .catch(error => {
+      alert('Terjadi kesalahan saat mengirim.');
+      console.error('Error!', error.message);
+    });
+  });
+</script>
+</body>
+</html>
