@@ -1,4 +1,3 @@
-<!-- layanan.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="text-center bg-cover bg-center text-white" style="background-image: url('https://i.imghippo.com/files/L4862IxY.jpg');">
+
   <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
     <div class="container mx-auto px-4 py-3 flex justify-center items-center">
       <a href="home.html">
@@ -26,21 +26,27 @@
   </header>
 
   <main class="py-10 px-4">
-    <h1 class="text-3xl font-bold mb-6 drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">Layanan Kami</h1>
-    <div class="flex flex-col items-center space-y-6 max-w-md mx-auto">
-      <a href="https://wa.me/6282112134258?text=Halo%20Mapan%20Interior%2C%20saya%20ingin%20konsultasi%20tentang%20Desain%20Interior" target="_blank" class="bg-red-600 text-white py-4 px-8 rounded-lg text-lg shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 w-full">Desain Interior</a>
-      <a href="https://wa.me/6282112134258?text=Halo%20Mapan%20Interior%2C%20saya%20ingin%20konsultasi%20tentang%20Kontraktor%20Interior" target="_blank" class="bg-red-600 text-white py-4 px-8 rounded-lg text-lg shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 w-full">Kontraktor Interior</a>
-      <a href="https://wa.me/6282112134258?text=Halo%20Mapan%20Interior%2C%20saya%20ingin%20konsultasi%20tentang%20Kontraktor%20Sipil" target="_blank" class="bg-red-600 text-white py-4 px-8 rounded-lg text-lg shadow-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] hover:bg-red-700 w-full">Kontraktor Sipil</a>
+    <h1 class="text-3xl font-bold mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">Layanan Kami</h1>
+    <div class="flex flex-col items-center space-y-4 max-w-md mx-auto">
+      <a href="https://wa.me/6282112134258" target="_blank" class="bg-red-600 text-white py-4 px-8 rounded-lg shadow-lg hover:bg-red-700 text-lg w-full">Desain Interior</a>
+      <a href="https://wa.me/6282112134258" target="_blank" class="bg-red-600 text-white py-4 px-8 rounded-lg shadow-lg hover:bg-red-700 text-lg w-full">Kontraktor Interior</a>
+      <a href="https://wa.me/6282112134258" target="_blank" class="bg-red-600 text-white py-4 px-8 rounded-lg shadow-lg hover:bg-red-700 text-lg w-full">Kontraktor Sipil</a>
+    </div>
+
+    <!-- Tombol Halaman Sebelumnya & Selanjutnya -->
+    <div class="flex justify-between max-w-xs mx-auto mt-10 space-x-4">
+      <a href="tentang.html" class="bg-gray-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-gray-700 w-full">Halaman Sebelumnya</a>
+      <a href="portfolio.html" class="bg-gray-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-gray-700 w-full">Halaman Selanjutnya</a>
     </div>
   </main>
 
-  <footer class="text-gray-200 text-center py-6">
-    <p>&copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN</p>
+  <footer class="text-gray-700 text-center py-6">
+    <p class="text-black/75">&copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN</p>
   </footer>
 
   <audio id="hover-audio-layanan" src="https://media.vocaroo.com/mp3/1gxAEKzVmrEw"></audio>
   <script>
-    const navLinksLayanan = document.querySelectorAll('nav a');
+    const navLinksLayanan = document.querySelectorAll('nav a, a.bg-red-600');
     const audioLayanan = document.getElementById('hover-audio-layanan');
 
     navLinksLayanan.forEach(link => {
