@@ -1,4 +1,3 @@
-<!-- index.html (Introducing Page dengan Background Gambar) -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,43 +6,35 @@
   <title>Introducing - Mapan Interior</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="text-center bg-cover bg-center flex flex-col justify-center items-center min-h-screen" style="background-image: url('https://i.imghippo.com/files/L4862IxY.jpg');">
+<body class="text-center bg-cover bg-center text-white" style="background-color: #ffffff;">
 
-  <header class="w-full bg-white/80 backdrop-blur-sm py-4 shadow-md">
-    <div class="flex justify-center">
-      <img src="https://i.imghippo.com/files/jeLf8293ko.png" alt="Logo Mapan" class="h-16 w-auto">
-    </div>
-  </header>
-
-  <main class="flex-grow flex flex-col justify-center items-center space-y-6 mt-8">
-    <h1 class="text-2xl font-bold text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">Selamat Datang di Mapan Interior</h1>
-
-    <!-- Video Introducing -->
+  <main class="py-10 px-4 flex flex-col items-center justify-center min-h-screen">
     <iframe width="300" height="533" src="https://www.youtube.com/embed/Tn-SWWVSpng" 
-      title="VIDEO PROFILE MAPAN 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen class="rounded-lg drop-shadow-lg"></iframe>
+            title="VIDEO PROFILE MAPAN 2025" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen class="mx-auto rounded-lg shadow-lg"></iframe>
 
-    <!-- Tombol Masuk -->
-    <a href="home.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl text-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)]">
-      MULAI BANGUN <br> IMPIAN ANDA
-    </a>
+    <div class="mt-6">
+      <a href="home.html" class="bg-red-600 text-white py-4 px-8 mt-4 rounded-lg drop-shadow-[0_4px_4px_rgba(0,0,0,0.7)] 
+         hover:bg-red-700 text-lg inline-block">
+         MULAI BANGUN IMPIAN ANDA
+      </a>
+    </div>
   </main>
 
-  <footer class="text-gray-200 py-4 text-sm">
-    &copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN
+  <footer class="text-gray-700 text-center py-6">
+    <p class="text-black/75">&copy; 2025 Mapan Interior. PT ENIGMA PRISMA DELAPAN</p>
   </footer>
 
-  <!-- Audio Hover Effect -->
   <audio id="hover-audio-intro" src="https://media.vocaroo.com/mp3/1gxAEKzVmrEw"></audio>
   <script>
-    const introButton = document.querySelector('a');
+    const buttonIntro = document.querySelector('a');
     const audioIntro = document.getElementById('hover-audio-intro');
 
-    introButton.addEventListener('mouseenter', () => {
+    buttonIntro.addEventListener('mouseenter', () => {
       audioIntro.currentTime = 0;
       audioIntro.play();
     });
   </script>
-
 </body>
 </html>
